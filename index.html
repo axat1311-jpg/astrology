@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JyotishVaani</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">Jyotish Vaani</div>
+            <div class="nav-right">
+                <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contacts">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="first">
+            <div class="leftSection">
+                Hi! my name is <span class="purple">Pt. Pawan Mishra</span>
+              <div>and I have </div> <span id="typed-text"></span>
+            </div>
+            <div class="rightSection">
+                <img src="fnt.jpeg"  alt="">
+            </div>
+
+        </section>
+
+        <hr>
+        <section id="about" class="about-section">
+            <div class="container" data-aos="fade-up">
+               
+
+        
+        <!-- SERVICES SECTION -->
+<section id="services" class="services-section">
+  <div class="container">
+    <h2 data-aos="fade-up">My Services</h2>
+    <div class="services-grid">
+      
+      <div class="service-card" data-aos="zoom-in">
+        <img src="stones.png" width="150">
+        <h3>GemStone Consultant</h3>
+        <div class="text-align">“I recommend gemstones that actually work — not guesses, only precision.
+Right stone, right time, right destiny</div>
+      </div>
+      
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+        <i><img src="plam.png" width="150" height="100"></i>
+        <h3>Palm Reader</h3>
+        <div class="text-align">“I read the truth hidden in your palm lines — no sugarcoating, only reality.
+Love, career, money, enemies… your hand reveals everything.</div>
+      </div>
+      
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+        <i><img src="kundli.png" width="150" ></i>
+        <h3>Kundali Reading</h3>
+        <div class="text-align">Your birth chart holds secrets of your fate — I decode them with accuracy.
+Marriage, career, dosh, delays… nothing stays hidden</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<hr>
+<section id="contacts">
+  <h2 class="section-title" data-aos="fade-up">Contact Me</h2>
+
+  <div class="contact-container" data-aos="fade-up" data-aos-delay="100">
+
+  <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="3c90dde2-3d2f-42b5-a86a-d779f6b02258" />
+  <input type="text"name="name" placeholder=" enter your name" required />
+  <input type="email" placeholder="enter email" name="email" required />
+  <textarea name="message" placeholder="add message" required></textarea>
+  <button type="submit">Send</button>
+  <p id="form-status"></p>
+</form>
+
+     <div class="contact-info">
+      
+     <p><i class="fa-solid fa-phone"></i> +91-9914734744</p>
+      <p><i class="fa-solid fa-location-dot"></i> India</p>
+      
+     
+    </div>
+    
+  </div>
+</section>
+
+    </main>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script>
+  var typed = new Typed("#typed-text", {
+    strings: [
+      'More Than 25 Years of Experience.','More Than 30K Trusted Clients. ','also Trusted Clients from others Countries.'],
+    typeSpeed: 30,
+    backSpeed: 30,
+    backDelay: 1000,
+    loop: true,
+    showCursor: true,
+    cursorChar: "|"
+  });
+</script>
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('form-status');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      status.innerHTML = "✅ Message sent successfully!";
+      form.reset();
+    }).catch(error => {
+      status.innerHTML = "❌ Oops! Something went wrong.";
+    });
+  });
+</script>
+
+
+</body>
